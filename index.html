@@ -322,7 +322,9 @@ function updateStats() {
   document.getElementById('correct-count').textContent = correct;
   document.getElementById('progress-bar').style.width = (correct / 16 * 100) + '%';
 
-  if (correct === 16) {
+  // Only show the solved prompt after the player has made a move.
+  // This prevents the initial solved layout in initPieces() from triggering it.
+  if (correct === 16 && moves > 0) {
     setTimeout(() => {
       document.getElementById('win-overlay').classList.add('show');
     }, 300);
