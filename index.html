@@ -56,6 +56,14 @@
     text-transform: uppercase;
   }
 
+  .coordinates {
+    margin-top: 2px;
+    color: #303030;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    user-select: text;
+  }
+
   #puzzle-board {
     position: relative;
     border: 1px solid #222;
@@ -202,6 +210,7 @@
       <span>CORRECT <span class="stat-val" id="correct-count">0</span> / 16</span>
     </div>
     <button class="btn" onclick="shuffleBoard()">↺ Shuffle</button>
+    <p class="coordinates">84°01'53.6"W</p>
   </div>
 
 
